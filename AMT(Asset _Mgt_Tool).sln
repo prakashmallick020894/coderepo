@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMT(Asset _Mgt_Tool)", "AMT(Asset _Mgt_Tool).csproj", "{106FEBD3-B94C-4C28-994C-23B7CD06C8AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{106FEBD3-B94C-4C28-994C-23B7CD06C8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106FEBD3-B94C-4C28-994C-23B7CD06C8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106FEBD3-B94C-4C28-994C-23B7CD06C8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106FEBD3-B94C-4C28-994C-23B7CD06C8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6F36828-EF3B-4272-BC78-D4DBB8122191}
+	EndGlobalSection
+EndGlobal

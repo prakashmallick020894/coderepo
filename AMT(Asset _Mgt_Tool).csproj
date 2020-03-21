@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>AMT_Asset__Mgt_Tool_</RootNamespace>
+  </PropertyGroup>
+
+
+
+</Project>
