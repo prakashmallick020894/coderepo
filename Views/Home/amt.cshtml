@@ -8,17 +8,14 @@
 
 <h2>Welcome</h2>
 
-<ul>
-    @for (int i = 0; i < (int)ViewData["NumTimes"]; i++)
-    {
-        <li>@ViewData["Message"]</li>
-    }
-</ul>
+
+@ViewData["Message"] from @ViewData["dep"].  You have entered @ViewData["NumTimes"]
+
 
 <form action="/Home/amt" method="post">
     <input type="text" name="name" />
     <input type="number" name="numTimes" />
-    <input type="number" name="numTimes2" />
+    <input type="text" name="dep" />
 
     <input type="submit" value="Submit" />
 </form>
