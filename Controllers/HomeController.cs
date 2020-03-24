@@ -38,6 +38,10 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
         {
             return View();
         }
+        public IActionResult Assets()
+        {
+            return View();
+        }
         public IActionResult amt(string name, string dep, int numTimes = 1)
         {
             ViewData["Message"] = "Hello" + name;
