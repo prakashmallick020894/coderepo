@@ -8,8 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+//Edited by Pallavi
 using Microsoft.EntityFrameworkCore;
-//using AMT_Asset__Mgt_Tool_.Models.Data;
+using AMT_Asset__Mgt_Tool_.Data;
 
 namespace AMT_Asset__Mgt_Tool_
 {
@@ -25,9 +26,10 @@ namespace AMT_Asset__Mgt_Tool_
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //edited by Pallavi
             services.AddControllersWithViews();
-            //services.AddDbContext<MVC_AMT_data>(options =>
-            //options.UseSqlServer(Configuration.GetConnectionString("MVC_AMT_data")));
+            services.AddDbContext<MvcAssetContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("MvcAssetContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
