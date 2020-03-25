@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using AMT_Asset__Mgt_Tool_.Data;
 using AMT_Asset__Mgt_Tool_.Models;
 
+//Edited by pallavi
 namespace AMT_Asset__Mgt_Tool_.Controllers
 {
     public class AssetsController : Controller
@@ -20,7 +21,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
         }
 
         // GET: Assets
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Asset()
         {
             return View(await _context.Asset.ToListAsync());
         }
