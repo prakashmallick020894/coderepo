@@ -34,7 +34,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
                 return NotFound();
             }
 
-            var asset = await _context.Asset
+            Asset asset = await _context.Asset
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (asset == null)
             {
@@ -61,7 +61,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
             {
                 _context.Add(asset);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Asset));
             }
             return View(asset);
         }
@@ -112,7 +112,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Asset));
             }
             return View(asset);
         }
@@ -125,7 +125,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
                 return NotFound();
             }
 
-            var asset = await _context.Asset
+            Asset asset = await _context.Asset
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (asset == null)
             {
@@ -143,7 +143,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
             var asset = await _context.Asset.FindAsync(id);
             _context.Asset.Remove(asset);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Asset));
         }
 
         private bool AssetExists(int id)
