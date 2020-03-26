@@ -20,7 +20,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
         }
 
         // GET: Rassets
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Request()
         {
             return View(await _context.Rasset.ToListAsync());
         }
@@ -60,7 +60,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
             {
                 _context.Add(rasset);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Request));
             }
             return View(rasset);
         }
@@ -111,7 +111,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Request));
             }
             return View(rasset);
         }
@@ -142,7 +142,7 @@ namespace AMT_Asset__Mgt_Tool_.Controllers
             var rasset = await _context.Rasset.FindAsync(id);
             _context.Rasset.Remove(rasset);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Request));
         }
 
         private bool RassetExists(int id)
