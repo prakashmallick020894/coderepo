@@ -30,7 +30,11 @@ namespace AMT_Asset__Mgt_Tool_
             services.AddControllersWithViews();
             services.AddDbContext<MvcAssetContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("MvcAssetContext")));
+            //edited by Pawan
+            services.AddDbContext<RequestContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("RequestContext")));
         }
+      
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -1,0 +1,74 @@
+﻿@model AMT_Asset__Mgt_Tool_.Models.Rasset
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Rasset</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="category" class="control-label"></label>
+                <input asp-for="category" class="form-control" />
+                <span asp-validation-for="category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="company" class="control-label"></label>
+                <input asp-for="company" class="form-control" />
+                <span asp-validation-for="company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="model" class="control-label"></label>
+                <input asp-for="model" class="form-control" />
+                <span asp-validation-for="model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="processor" class="control-label"></label>
+                <input asp-for="processor" class="form-control" />
+                <span asp-validation-for="processor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ram" class="control-label"></label>
+                <input asp-for="ram" class="form-control" />
+                <span asp-validation-for="ram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hdd" class="control-label"></label>
+                <input asp-for="hdd" class="form-control" />
+                <span asp-validation-for="hdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ssd" class="control-label"></label>
+                <input asp-for="ssd" class="form-control" />
+                <span asp-validation-for="ssd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="type" class="control-label"></label>
+                <input asp-for="type" class="form-control" />
+                <span asp-validation-for="type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="p_date" class="control-label"></label>
+                <input asp-for="p_date" class="form-control" />
+                <span asp-validation-for="p_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
