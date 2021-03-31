@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 using Microsoft.EntityFrameworkCore;
 using AMT_Asset__Mgt_Tool_.Models;
 
-//Edited by Pallavi
+//Edited by Prakash
 namespace AMT_Asset__Mgt_Tool_.Data
 {
-    public class MvcAssetContext : DbContext
+    public class MvcMovieContext : DbContext
     {
-        public MvcAssetContext(DbContextOptions<MvcAssetContext> options)
+        public MvcMovieContext(DbContextOptions<MvcMovieContext> options)
             : base(options)
         {
         }
 
-        public DbSet<Asset> Asset { get; set; }
+        public DbSet<Movie> Movie { get; set; }
     }
 }
